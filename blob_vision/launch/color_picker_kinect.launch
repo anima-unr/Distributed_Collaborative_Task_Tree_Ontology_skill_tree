@@ -1,0 +1,11 @@
+<launch>
+	<node pkg="blob_vision" type="color_picker_node" name="color_picker" output="screen">
+		<!-- color files will be in the color_dir directory 
+			(defaults to the colors dir in the blob_vision directory)
+			and the individual filenames will be in the histfiles array -->
+		<!-- <param name="color_dir" type="str" value="$(find blob_vision)/colors/kinect"/> -->
+		<!-- <rosparam param="histfiles"> ["dfs_purple.txt", "dfs_orange.txt", "dfs_green.txt"] </rosparam> -->
+	    <!-- <rosparam param="color_names"> ["purple", "orange", "green"] </rosparam> -->
+		<remap from="image" to="/kinect2/hd/image_color"/>
+	</node>
+</launch>

@@ -1,0 +1,257 @@
+NodeList: ['ROOT_4_0_000_0','SKILL_7_0_001_0','THEN_0_0_002_1','PLACE_3_0_003_1','AND_2_0_004_1','PLACE_3_0_005_1','PLACE_3_0_006_1','THEN_0_0_007_2','PLACE_3_0_008_2','OR_1_0_009_2','PLACE_3_0_010_2','PLACE_3_0_011_2',
+'PLACE_3_0_012_2','ROOT_4_1_013_0','SKILL_7_1_014_0','THEN_0_1_015_1','PLACE_3_1_016_1','AND_2_1_017_1','PLACE_3_1_018_1','PLACE_3_1_019_1','THEN_0_1_020_2','PLACE_3_1_021_2','OR_1_1_022_2','PLACE_3_1_023_2',
+'PLACE_3_1_024_2','PLACE_3_1_025_2']
+
+Nodes:
+  ROOT_4_0_000_0:
+    mask:
+      type: 4
+      robot: 0
+      node: 0
+      skill: 0
+    parent: 'NONE'
+    children: ['SKILL_7_0_001_0']
+    peeers: ['ROOT_4_1_013_0']
+  SKILL_7_0_001_0:
+    mask:
+      type: 7
+      robot: 0
+      node: 1
+      skill: 0
+    parent: ROOT_4_0_000_0
+    children: ['THEN_0_0_002_1','THEN_0_0_007_2']
+    peeers: ['SKILL_7_1_014_0']
+  THEN_0_0_002_1:
+    mask:
+      type: 0
+      robot: 0
+      node: 2
+      skill: 1
+    parent: SKILL_7_0_001_0
+    children: ['PLACE_3_0_003_1','AND_2_0_004_1']
+    peeers: ['THEN_0_1_015_1']
+  PLACE_3_0_003_1:
+    mask:
+      type: 6
+      robot: 0
+      node: 3
+      skill: 1
+    parent: THEN_0_0_002_1
+    children: ['NONE']
+    peeers: ['PLACE_3_1_016_1']
+    object: Cup
+  AND_2_0_004_1:
+    mask:
+      type: 2
+      robot: 0
+      node: 4
+      skill: 1
+    parent: THEN_0_0_002_1
+    children: ['PLACE_3_0_005_1','PLACE_3_0_006_1']
+    peeers: ['AND_2_1_017_1']
+  PLACE_3_0_005_1:
+    mask:
+      type: 6
+      robot: 0
+      node: 5
+      skill: 1
+    parent: AND_2_0_004_1
+    children: ['NONE']
+    peeers: ['PLACE_3_1_018_1']
+    object: Tea
+  PLACE_3_0_006_1:
+    mask:
+      type: 6
+      robot: 0
+      node: 6
+      skill: 1
+    parent: AND_2_0_004_1
+    children: ['NONE']
+    peeers: ['PLACE_3_1_019_1']
+    object: Sugar
+  THEN_0_0_007_2:
+    mask:
+      type: 0
+      robot: 0
+      node: 7
+      skill: 2
+    parent: SKILL_7_0_001_0
+    children: ['PLACE_3_0_008_2','OR_1_0_009_2','PLACE_3_0_012_2']
+    peeers: ['THEN_0_1_020_2']
+  PLACE_3_0_008_2:
+    mask:
+      type: 6
+      robot: 0
+      node: 8
+      skill: 2
+    parent: THEN_0_0_007_2
+    children: ['NONE']
+    peeers: ['PLACE_3_1_021_2']
+    object: Bread1
+  OR_1_0_009_2:
+    mask:
+      type: 1
+      robot: 0
+      node: 9
+      skill: 2
+    parent: THEN_0_0_007_2
+    children: ['PLACE_3_0_010_2','PLACE_3_0_011_2']
+    peeers: ['OR_1_1_022_2']
+    object: Bread1
+  PLACE_3_0_010_2:
+    mask:
+      type: 6
+      robot: 0
+      node: 10
+      skill: 2
+    parent: OR_1_0_009_2
+    children: ['NONE']
+    peeers: ['PLACE_3_1_023_2']
+    object: Meat
+  PLACE_3_0_011_2:
+    mask:
+      type: 6
+      robot: 0
+      node: 11
+      skill: 2
+    parent: OR_1_0_009_2
+    children: ['NONE']
+    peeers: ['PLACE_3_1_024_2']
+    object: Lettuce
+  PLACE_3_0_012_2:
+    mask:
+      type: 6
+      robot: 0
+      node: 12
+      skill: 2
+    parent: THEN_0_0_007_2
+    children: ['NONE']
+    peeers: ['PLACE_3_1_025_2']
+    object: Bread2
+
+
+  ROOT_4_1_013_0:
+    mask:
+      type: 4
+      robot: 1
+      node: 13
+      skill: 0
+    parent: 'NONE'
+    children: ['SKILL_7_1_014_0']
+    peeers: ['ROOT_4_0_000_0']
+  SKILL_7_1_014_0:
+    mask:
+      type: 7
+      robot: 1
+      node: 14
+      skill: 0
+    parent: ROOT_4_1_013_0
+    children: ['THEN_0_1_015_1', 'THEN_0_1_020_2']
+    peeers: ['SKILL_7_0_001_0']
+  THEN_0_1_015_1:
+    mask:
+      type: 0
+      robot: 1
+      node: 15
+      skill: 1
+    parent: SKILL_7_1_014_0
+    children: ['PLACE_3_1_016_1','AND_2_1_017_1']
+    peeers: ['THEN_0_0_002_1']
+  PLACE_3_1_016_1:
+    mask:
+      type: 6
+      robot: 1
+      node: 16
+      skill: 1
+    parent: THEN_0_1_015_1
+    children: ['NONE']
+    peeers: ['PLACE_3_0_003_1']
+    object: Cup
+  AND_2_1_017_1:
+    mask:
+      type: 2
+      robot: 1
+      node: 17
+      skill: 1
+    parent: THEN_0_1_015_1
+    children: ['PLACE_3_1_018_1','PLACE_3_1_019_1']
+    peeers: ['AND_2_0_004_1']
+  PLACE_3_1_018_1:
+    mask:
+      type: 6
+      robot: 1
+      node: 18
+      skill: 1
+    parent: AND_2_1_017_1
+    children: ['NONE']
+    peeers: ['PLACE_3_0_005_1']
+    object: Tea
+  PLACE_3_1_019_1:
+    mask:
+      type: 6
+      robot: 1
+      node: 19
+      skill: 1
+    parent: AND_2_1_017_1
+    children: ['NONE']
+    peeers: ['PLACE_3_0_006_1']
+    object: Sugar
+  THEN_0_1_020_2:
+    mask:
+      type: 0
+      robot: 1
+      node: 20
+      skill: 2
+    parent: SKILL_7_1_014_0
+    children: ['PLACE_3_1_021_2','OR_1_1_022_2','PLACE_3_1_025_2']
+    peeers: ['THEN_0_0_007_2']
+  PLACE_3_1_021_2:
+    mask:
+      type: 6
+      robot: 1
+      node: 21
+      skill: 2
+    parent: THEN_0_1_020_2
+    children: ['NONE']
+    peeers: ['PLACE_3_0_008_2']
+    object: Bread1
+  OR_1_1_022_2:
+    mask:
+      type: 1
+      robot: 1
+      node: 22
+      skill: 2
+    parent: THEN_0_1_020_2
+    children: ['PLACE_3_1_023_2','PLACE_3_1_024_2']
+    peeers: ['OR_1_0_009_2']
+    object: Bread1
+  PLACE_3_1_023_2:
+    mask:
+      type: 6
+      robot: 1
+      node: 23
+      skill: 2
+    parent: OR_1_1_022_2
+    children: ['NONE']
+    peeers: ['PLACE_3_0_010_2']
+    object: Meat
+  PLACE_3_1_024_2:
+    mask:
+      type: 6
+      robot: 1
+      node: 24
+      skill: 2
+    parent: OR_1_1_022_2
+    children: ['NONE']
+    peeers: ['PLACE_3_0_011_2']
+    object: Lettuce
+  PLACE_3_1_025_2:
+    mask:
+      type: 6
+      robot: 1
+      node: 25
+      skill: 2
+    parent: THEN_0_1_020_2
+    children: ['NONE']
+    peeers: ['PLACE_3_0_012_2']
+    object: Bread2

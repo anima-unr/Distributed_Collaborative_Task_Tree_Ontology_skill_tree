@@ -1,0 +1,16 @@
+<launch>
+	<group ns="forearm">
+		<node pkg="blob_vision" type="color_finder_node" name="blob_finder_forearm" output="screen">
+			<!-- color files will be in the color_dir directory 
+				(defaults to the colors dir in the blob_vision directory)
+				and the individual filenames will be in the histfiles array -->
+			<param name="color_dir" type="str" value="$(find blob_vision)/colors/forearm"/>
+			<rosparam param="histfiles"> ["blue_leg.txt", "green_leg.txt", "orange_top.txt", "pink_bar.txt", "purple_top.txt", "yellow_bar.txt"] </rosparam>
+		    <rosparam param="color_names"> ["blue_leg", "green_leg", "orange_top", "pink_bar", "purple_top", "yellow_bar"] </rosparam>
+<!-- 			<rosparam param="histfiles"> ["pink_bar.txt"] </rosparam>
+		    <rosparam param="color_names"> ["pink_bar"] </rosparam>
+ -->
+			<remap from="image_raw" to="/r_forearm_cam/image_raw"/>
+		</node>
+	</group>
+</launch>

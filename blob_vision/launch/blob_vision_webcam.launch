@@ -1,0 +1,14 @@
+<launch>
+	<node pkg="usb_cam" type="usb_cam_node" name="camera"/>
+	<node pkg="blob_vision" type="color_finder_node" name="blob_finder_kinect" output="screen">
+			<!-- color files will be in the color_dir directory 
+				(defaults to the colors dir in the blob_vision directory)
+				and the individual filenames will be in the histfiles array -->
+			<param name="color_dir" type="str" value="$(find blob_vision)/colors/webcam"/>
+			<rosparam param="histfiles"> ["yellow.txt", "blue.txt", "green.txt", "red.txt"] </rosparam>
+		    <rosparam param="color_names"> ["yellow", "blue", "green", "red"] </rosparam>
+<!-- 			<rosparam param="histfiles"> ["yellow_bar.txt"] </rosparam>
+		    <rosparam param="color_names"> ["yellow_bar"] </rosparam> -->
+ 			<remap from="image_raw" to="/camera/image_raw"/>
+	</node>
+</launch>

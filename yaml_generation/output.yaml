@@ -1,0 +1,205 @@
+NodeList: ['ROOT_4_0_000', 'THEN_0_0_001', 'OR_1_0_002', 'PLACE_6_0_003', 'PLACE_6_0_004', 'AND_2_0_005', 'AND_2_0_006', 'PLACE_6_0_007', 'PLACE_6_0_008', 'AND_2_0_009', 'PLACE_6_0_010', 'PLACE_6_0_011', 'ROOT_4_1_012', 'THEN_0_1_013', 'OR_1_1_014', 'PLACE_6_1_015', 'PLACE_6_1_016', 'AND_2_1_017', 'AND_2_1_018', 'PLACE_6_1_019', 'PLACE_6_1_020', 'AND_2_1_021', 'PLACE_6_1_022', 'PLACE_6_1_023' ]
+Nodes: 
+  ROOT_4_0_000:
+    mask:
+      type: 4
+      robot: 0
+      node: 0
+    parent: 'NONE'
+    children: ['THEN_0_0_001']
+    peers: ['NONE']
+  THEN_0_0_001:
+    mask:
+      type: 0
+      robot: 0
+      node: 1
+    parent: ROOT_4_0_000
+    children: ['OR_1_0_002', 'AND_2_0_005']
+    peers: ['NONE']
+  OR_1_0_002:
+    mask:
+      type: 1
+      robot: 0
+      node: 2
+    parent: THEN_0_0_001
+    children: ['PLACE_6_0_003', 'PLACE_6_0_004']
+    peers: ['NONE']
+  PLACE_6_0_003:
+    mask:
+      type: 6
+      robot: 0
+      node: 3
+    parent: OR_1_0_002
+    children: ['NONE']
+    peers: ['NONE']
+    object: one
+  PLACE_6_0_004:
+    mask:
+      type: 6
+      robot: 0
+      node: 4
+    parent: OR_1_0_002
+    children: ['NONE']
+    peers: ['NONE']
+    object: two
+  AND_2_0_005:
+    mask:
+      type: 2
+      robot: 0
+      node: 5
+    parent: THEN_0_0_001
+    children: ['AND_2_0_006', 'AND_2_0_009']
+    peers: ['NONE']
+  AND_2_0_006:
+    mask:
+      type: 2
+      robot: 0
+      node: 6
+    parent: AND_2_0_005
+    children: ['PLACE_6_0_007', 'PLACE_6_0_008']
+    peers: ['NONE']
+  PLACE_6_0_007:
+    mask:
+      type: 6
+      robot: 0
+      node: 7
+    parent: AND_2_0_006
+    children: ['NONE']
+    peers: ['NONE']
+    object: three
+  PLACE_6_0_008:
+    mask:
+      type: 6
+      robot: 0
+      node: 8
+    parent: AND_2_0_006
+    children: ['NONE']
+    peers: ['NONE']
+    object: four
+  AND_2_0_009:
+    mask:
+      type: 2
+      robot: 0
+      node: 9
+    parent: AND_2_0_005
+    children: ['PLACE_6_0_010', 'PLACE_6_0_011']
+    peers: ['NONE']
+  PLACE_6_0_010:
+    mask:
+      type: 6
+      robot: 0
+      node: 10
+    parent: AND_2_0_009
+    children: ['NONE']
+    peers: ['NONE']
+    object: five
+  PLACE_6_0_011:
+    mask:
+      type: 6
+      robot: 0
+      node: 11
+    parent: AND_2_0_009
+    children: ['NONE']
+    peers: ['NONE']
+    object: six
+  ROOT_4_1_012:
+    mask:
+      type: 4
+      robot: 1
+      node: 12
+    parent: 'NONE'
+    children: ['THEN_0_1_013']
+    peers: ['NONE']  THEN_0_1_013:
+    mask:
+      type: 0
+      robot: 1
+      node: 13
+    parent: ROOT_4_1_012
+    children: ['OR_1_1_014', 'AND_2_1_017']
+    peers: ['NONE']
+  OR_1_1_014:
+    mask:
+      type: 1
+      robot: 1
+      node: 14
+    parent: THEN_0_1_013
+    children: ['PLACE_6_1_015', 'PLACE_6_1_016']
+    peers: ['NONE']
+  PLACE_6_1_015:
+    mask:
+      type: 6
+      robot: 1
+      node: 15
+    parent: OR_1_1_014
+    children: ['NONE']
+    peers: ['NONE']
+    object: one
+  PLACE_6_1_016:
+    mask:
+      type: 6
+      robot: 1
+      node: 16
+    parent: OR_1_1_014
+    children: ['NONE']
+    peers: ['NONE']
+    object: two
+  AND_2_1_017:
+    mask:
+      type: 2
+      robot: 1
+      node: 17
+    parent: THEN_0_1_013
+    children: ['AND_2_1_018', 'AND_2_1_021']
+    peers: ['NONE']
+  AND_2_1_018:
+    mask:
+      type: 2
+      robot: 1
+      node: 18
+    parent: AND_2_1_017
+    children: ['PLACE_6_1_019', 'PLACE_6_1_020']
+    peers: ['NONE']
+  PLACE_6_1_019:
+    mask:
+      type: 6
+      robot: 1
+      node: 19
+    parent: AND_2_1_018
+    children: ['NONE']
+    peers: ['NONE']
+    object: three
+  PLACE_6_1_020:
+    mask:
+      type: 6
+      robot: 1
+      node: 20
+    parent: AND_2_1_018
+    children: ['NONE']
+    peers: ['NONE']
+    object: four
+  AND_2_1_021:
+    mask:
+      type: 2
+      robot: 1
+      node: 21
+    parent: AND_2_1_017
+    children: ['PLACE_6_1_022', 'PLACE_6_1_023']
+    peers: ['NONE']
+  PLACE_6_1_022:
+    mask:
+      type: 6
+      robot: 1
+      node: 22
+    parent: AND_2_1_021
+    children: ['NONE']
+    peers: ['NONE']
+    object: five
+  PLACE_6_1_023:
+    mask:
+      type: 6
+      robot: 1
+      node: 23
+    parent: AND_2_1_021
+    children: ['NONE']
+    peers: ['NONE']
+    object: six
